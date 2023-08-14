@@ -2,22 +2,18 @@ import { Buttons } from './FeedbackStyled';
 
 export const FeedbackOptions = ({ onLeaveFeedback, options }) => (
   <Buttons>
-    {options.map(el => {
+    {options.map((el, i) => {
       return (
-        <button type="button" name={el} onClick={onLeaveFeedback}>
+        <button
+          key={i}
+          type="button"
+          name={el}
+          onClick={onLeaveFeedback}
+          style={{ textTransform: 'capitalize' }}
+        >
           {el}
         </button>
       );
     })}
-
-    {/* <button type="button" name="good" onClick={onLeaveFeedback}>
-      Good
-    </button>
-    <button type="button" name="neutral" onClick={onLeaveFeedback}>
-      Neutral
-    </button>
-    <button type="button" name="bad" onClick={onLeaveFeedback}>
-      Bad
-    </button> */}
   </Buttons>
 );
