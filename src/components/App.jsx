@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import { useState } from 'react';
 import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
@@ -22,6 +22,7 @@ export const App = () => {
       case 'bad':
         setBad(bad + 1);
         break;
+      default;
     }
   };
   const countTotalFeedback = () => {
