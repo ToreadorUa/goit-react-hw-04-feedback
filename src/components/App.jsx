@@ -25,6 +25,7 @@ export const App = () => {
       default:
     }
   };
+  const a = 0;
   const countTotalFeedback = () => {
     return good + bad + neutral;
   };
